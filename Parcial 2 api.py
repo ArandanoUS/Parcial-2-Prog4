@@ -5,7 +5,7 @@ import pandas as pd
 app = Flask(__name__)
 
 # Cargar y procesar los datos
-file_path = 'API_SH.IMM.MEAS_DS2_en_csv_v2_787.csv'  # Asegúrate de que la ruta del archivo sea correcta
+file_path = '/API_SH.IMM.MEAS_DS2_en_csv_v2_787.csv'  # Asegúrate de que la ruta del archivo sea correcta
 data = pd.read_csv(file_path, skiprows=4)
 
 # Filtrar los datos para Panamá
