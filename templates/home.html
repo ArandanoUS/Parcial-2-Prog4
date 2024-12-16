@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacunación en Panamá</title>
+</head>
+<body>
+    <h1>Tasa de Vacunación contra el Sarampión en Panamá</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Año</th>
+                <th>Tasa de Vacunación (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item.year }}</td>
+                <td>{{ item.vaccination_rate if item.vaccination_rate is not none else "N/A" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p>
+        <a href="/">Inicio</a> |
+        <a href="/range?start=2000&end=2020">Datos de 2000-2020</a>
+    </p>
+</body>
+</html>

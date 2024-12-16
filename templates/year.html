@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Año</title>
+</head>
+<body>
+    <h1>Tasa de Vacunación en {{ data.year }}</h1>
+    <p><strong>Tasa de vacunación:</strong> {{ data.vaccination_rate if data.vaccination_rate is not none else "N/A" }}%</p>
+    <p><a href="/">Regresar al inicio</a></p>
+</body>
+</html>

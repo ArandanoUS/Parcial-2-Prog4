@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos por Rango de Años</title>
+</head>
+<body>
+    <h1>Datos de Vacunación: {{ start }} - {{ end }}</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Año</th>
+                <th>Tasa de Vacunación (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item.year }}</td>
+                <td>{{ item.vaccination_rate if item.vaccination_rate is not none else "N/A" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p><a href="/">Regresar al inicio</a></p>
+</body>
+</html>
